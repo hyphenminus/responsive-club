@@ -1,0 +1,278 @@
+/*  250
+    mobile width: 280-414
+    500
+    tablet portrait width: 540x720 768x1024 1024*1366
+    1000
+    desktop 1024x768 1920x1080
+    4000
+    mobile 360×640-414×896
+    tablet 601×962-1280×800
+    desktop 1024×768-1920×1080
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* IE11 width fix for blocks within flex items */
+    max-width: 100%;
+}
+
+nav,
+main,
+section,
+footer {
+    /* IE11 fix */
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+    text-align: center;
+    color: maroon;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0.25rem;
+}
+
+html {
+    font-family: 'Hepta Slab', serif;
+    font-size: 16px;
+    scroll-padding-top: 4rem;
+}
+
+.ccc {
+    font-family: 'Ribeye Marrow', cursive;
+    font-weight: normal;
+    color: gold;
+}
+
+#logo {
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 4rem;
+    color: gold;
+    background-color: maroon;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 0.125rem gold solid;
+    width: 100%;
+}
+
+
+/* nav>* {
+    width: content;
+} */
+
+nav li {
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+main {
+    margin: 4rem auto 0;
+    max-width: 80rem;
+}
+
+section {
+    border-bottom: 0.125rem maroon solid;
+    padding: 0.5rem;
+}
+
+section>p {
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+#intro {
+    height: 30rem;
+    background: url(images/taste.jpg) center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    padding: 0.5rem 0rem;
+}
+
+#intro * {
+    color: gold;
+}
+
+#banner {
+    padding: 0.5rem;
+    background: rgba(121, 106, 106, 50%);
+    border-radius: 4rem;
+}
+
+h1.ccc {
+    background-color: brown;
+    border: gold 0.25rem solid;
+    border-radius: 2rem;
+    max-width: max-content;
+    margin: 0.5rem auto 1rem;
+    padding: 0 1rem;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.item {
+    border: brown 0.25rem solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.125rem 0.25rem 0.5rem grey;
+}
+
+.item div {
+    font-weight: bold;
+    color: maroon;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+img.item {
+    padding: 0;
+    object-fit: cover;
+}
+
+.item img {
+    object-fit: cover;
+    max-height: 40%;
+    border-radius: 0.5rem;
+}
+
+.item p {
+    margin-top: 0.5rem;
+}
+
+#courses .item {
+    background-color: rgb(245, 255, 252);
+}
+
+#recipes .item {
+    background-color: rgb(240, 235, 211);
+}
+
+#events .item {
+    background-color: rgb(255, 218, 206);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: maroon;
+    color: gold;
+    padding: 0.5rem;
+    font-size: 87.5%;
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+    #logo {
+        font-size: 1.5rem;
+    }
+    #intro {
+        height: 20rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 2rem;
+    }
+    #logo {
+        font-size: 1rem;
+    }
+    #intro {
+        height: 18rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        scroll-padding-top: 0;
+    }
+    main {
+        margin-top: 0;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2,
+    h3,
+    h4 {
+        font-size: 1.25rem;
+    }
+    nav {
+        position: static;
+        padding: 0 0.25rem;
+        height: 1rem;
+        font-size: 0.5rem;
+    }
+    #logo {
+        font-size: 0.5rem;
+    }
+    nav li {
+        padding-left: 0.5rem;
+    }
+    img.item {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 12px;
+    }
+}
